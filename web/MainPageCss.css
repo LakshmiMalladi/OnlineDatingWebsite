@@ -1,0 +1,119 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 9, 2017, 11:52:32 PM
+    Author     : KriLak
+*/
+
+.text{
+    color:white;
+}
+#signimage{
+    background-image: url("background1.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color:black;
+}
+#signimage1{
+    background-image: url("background2.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color:black;
+}
+#ind1{
+    
+    color:white;
+    size: 30px;
+    float:left;
+}
+            .navbar-default{
+             display:box;
+            border-color:#e7e7e7;
+            background-color: #3333ff;
+        }
+        .navbar-collapse{
+            margin-right: 0;
+            margin-left: 0;
+            width:auto;
+            border-top:0;
+            border-top-width: 0px;
+            border-top-style: initial;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .navbar-collapse.collapse{
+            overflow-x: visible;
+            overflow-y: visible;
+            display: block;
+            height : auto;
+        }
+        #navbar li{
+            margin:0;
+            padding:0;
+        }
+        #navbar li{
+            list-style: none outside none;
+            text-decoration: none;
+        }
+        #navbar ul{
+            list-style: none;
+            text-decoration: none;
+        }
+        a:link{
+            text-decoration: none;
+        }
+        .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #3333ff;
+            min-width: 90px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 8px 20px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content{
+            display:block;
+        }
+        #dis{
+           width:50px; 
+        }
+        th{
+            width: 20px;
+        }
+        #signout{
+            float:right;
+            right:90px;
+            position:absolute;
+        }
+        #bt1{
+            color:white;
+            background-color: #3333ff;
+        }
+        .dropbtn.apply{
+            color:white;
+            background-color: #3333ff;
+        }
+        #body1{
+            background-color: #e6e6ff;
+        }
+       

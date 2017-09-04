@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="signimage1" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+    <h:head>    
+      <title>Match.com &reg; | The Leading Online Dating Site for Singles and  Personals : Match.com </title><link rel="icon" type="image/x-icon" href="match1.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="MainPageCss.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    
+    <body>
+        
+        <h:form>
+    
+        
+            <h3><font color="violet">Create your profile!!</font></h3>
+            <p>Enter your Name:<br></br>
+                <h:inputText id="Name" 
+                        title="Please enter your Hair color"
+                        value="#{signup.name}">                   
+                </h:inputText>
+            </p>
+            <br></br>
+            <p>I am: <br></br>
+            <h:selectOneMenu id="gender" title="please enter your gender"
+                             value="#{signup.gender}">
+                <f:selectItem itemValue="Male" itemLabel="male" />
+                <f:selectItem itemValue="Female" itemLabel="female" />
+            </h:selectOneMenu>
+            </p>
+            <br></br>
+            
+            <p>Seeking a:<br></br>
+                <h:selectOneMenu id="sgender" value="#{signup.interestgender}">
+                    <f:selectItem itemValue="Male" itemLabel="male"/>
+                    <f:selectItem itemValue="Female" itemLabel="female"/>
+                </h:selectOneMenu>               
+            </p>
+            <br></br>
+            
+             <p>Enter age:<br></br>
+                <h:inputText id="age" 
+                        title="Please enter your age"
+                        value="#{signup.age}">                   
+                </h:inputText>
+                 &nbsp;
+            </p>
+            <br></br>
+            
+             <p>Enter your Zip code:<br></br>
+                <h:inputText id="zipcode" 
+                        title="Please enter the zipcode(radius) to search:"
+                        value="#{signup.zipcode}">                   
+                </h:inputText>
+            </p>
+            <br></br>
+            <p>Enter your eye color(select only one):<br></br>
+                <h:selectOneMenu id="eyecolor" value="#{signup.eyecolor}">
+                    <f:selectItem itemValue="Black" itemLabel="black"/>
+                    <f:selectItem itemValue="Brown" itemLabel="brown"/>
+                    <f:selectItem itemValue="Blue" itemLabel="blue"/>
+                    <f:selectItem itemValue="Honey" itemLabel="honey"/>
+                    <f:selectItem itemValue="Hazel" itemLabel="hazel"/>
+                </h:selectOneMenu>              
+            </p>
+            
+            <br></br>
+            
+            
+             <p>Enter your hair color(select only one):<br></br>
+                 <h:selectOneMenu id="haircolor" value="#{signup.haircolor}">
+                    <f:selectItem itemValue="Black" itemLabel="black"/>
+                    <f:selectItem itemValue="Light Brown" itemLabel="light brown"/>
+                    <f:selectItem itemValue="Dark Brown" itemLabel="dark brown"/>
+                    <f:selectItem itemValue="Blonde" itemLabel="blonde"/>
+                    <f:selectItem itemValue="Auburn/Red" itemLabel="aburn/red"/>
+                </h:selectOneMenu>
+             </p>          
+            <br></br>
+            
+            <p>Enter any 3 interests</p>
+            <p>Enter your first interest<br></br>
+                <h:inputText id="Interest01" 
+                        title="Please enter your first interest"
+                        value="#{signup.interest1}">                   
+                </h:inputText>
+            </p>
+            <br></br>
+                 <p>Enter your second interest<br></br>
+                <h:inputText id="Interest02" 
+                        title="Please enter your second interest"
+                        value="#{signup.interest2}">                   
+                </h:inputText>
+            </p>
+            <br></br>
+            <p>Enter your third interest<br></br>
+                <h:inputText id="Interest03" 
+                        title="Please enter your third interest"
+                        value="#{signup.interest3}">                   
+                </h:inputText>
+            </p>
+            <br></br>
+            
+        
+           <p>Enter your physique type(select any one):<br></br>
+                <h:selectOneMenu id="body_type" value="#{signup.bodytype}">
+                    <f:selectItem itemValue="No Preference" itemLabel="no preference"/>
+                    <f:selectItem itemValue="Slender" itemLabel="slender"/>
+                    <f:selectItem itemValue="Above Average" itemLabel="above average"/>
+                    <f:selectItem itemValue="Athletic and Toned" itemLabel="athletic and toned"/>
+                    <f:selectItem itemValue="Heavy Set" itemLabel="heavy set"/>
+                </h:selectOneMenu>
+            </p>
+            <br></br>   
+                
+            <p>Enter your height:<br></br>
+                
+                <h:inputText id="height" 
+                        title="Please enter your Hair color"
+                        value="#{signup.height}">                   
+                </h:inputText>
+            </p> 
+           <br></br>
+           
+            <p>Enter your relationship status:<br></br>
+                <h:selectOneMenu id="Relationship_status" value="#{signup.relationshipstatus}">
+                    <f:selectItem itemValue="Never Married" itemLabel="never married"/>
+                    <f:selectItem itemValue="Married" itemLabel="married"/>
+                    <f:selectItem itemValue="Divorced" itemLabel="divorced"/>
+                    <f:selectItem itemValue="Currently Seperated" itemLabel="currenty seperated"/>
+                    <f:selectItem itemValue="Widow/Widower" itemLabel="widow/widower"/>
+                </h:selectOneMenu>
+            </p>
+                   
+            <p>Your headline:<br></br>
+                <h:inputText id="headline" 
+                        title="Your headline is a great way to grab someone's attention."
+                        value="#{signup.headline}">                   
+                </h:inputText>
+            </p> 
+            <p>Write about your match:<br></br>
+                <h:inputText id="aboutmatch" 
+                        title="Short description of what you are looking for."
+                        value="#{signup.aboutmatch}">                   
+                </h:inputText>
+            </p> 
+           <br></br>
+           <p>please give a security question: <br></br>
+               <h:inputText id="security_question"
+                            title="this helps to access your account when you forget your password."
+                            value="#{signup.security_ques}">
+               </h:inputText>
+           </p>
+           <br></br>
+           <p>please give a answer to your security question: <br></br>
+               <h:inputText id="security_answer"
+                            title="this helps to access your account when you forget your password."
+                            value="#{signup.security_ans}">
+               </h:inputText>
+           </p>
+           <br></br>
+             <p>
+                <h:commandButton id="submit" value="CreateProfile"                               
+                                 action="confirmation1.xhtml" />
+            </p>
+            
+        </h:form>
+        
+    </body>
+</html>

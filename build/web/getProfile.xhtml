@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html id="signimage" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p ="http://primefaces.org/ui">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            #name{
+                position:absolute;
+                left:40px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div>
+            <h:form>
+                <h:outputText id="name" value="#{otherProfileData.name}"/><br></br>
+                <h:outputText id="age" value="#{otherProfileData.age}"/><br></br>
+                <h:outputText id="gender" value="#{otherProfileData.gender}"/><br></br>
+                <h:outputText id="city" value="#{otherProfileData.city}"/><br></br>
+                <h:outputText id="zipcode" value="#{otherProfileData.zipcode}"/><br></br>
+                <h:outputText id="relation" value="#{otherProfileData.relationshipstatus}"/><br></br>
+                <h:outputText id="eye" value="#{otherProfileData.eyecolor}"/><br></br>
+                <h:outputText id="i1" value="#{otherProfileData.interest1}"/><br></br>
+                <h:outputText id="i2" value="#{otherProfileData.interest2}"/><br></br>
+                <h:outputText id="i3" value="#{otherProfileData.interest3}"/><br></br>
+                <h:outputText id="body" value="#{otherProfileData.bodytype}"/><br></br>
+                    <h:outputText id="lastlogin" value="#{otherProfileData.lastlogin}"/><br></br>   
+                <br></br>
+                <h:commandButton id="back" value="Back to search" action="resultSearch.xhtml"/>
+                <p:spacer width="10"></p:spacer>
+                <h:commandButton id="search" value="Another search" action="Discover.xhtml"/>
+            </h:form>
+                
+
+        </div>
+    </body>
+</html>

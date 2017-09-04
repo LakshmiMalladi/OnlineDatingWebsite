@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="signimage1" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+    <head> 
+        <style type="text/css" media="screen">
+
+table{
+border-collapse:collapse;
+border:1px solid slateblue;
+}
+
+table td{
+border:1px solid slateblue;
+}
+</style>
+      <title>Match.com &reg; | The Leading Online Dating Site for Singles and  Personals : Match.com </title><link rel="icon" type="image/x-icon" href="match1.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="MainPageCss.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <h:body>
+        <h:form>
+       <p>Messages:</p>
+       <h1>#{messages.Inbox()}</h1>
+       <h1>#{messages.Outbox()}</h1>
+       <p>Inbox</p>
+            <h:dataTable id="messages" 
+                         rows ="#{messages.getInbox().size()}" 
+                         value="#{messages.getInbox()}" var="items">  
+                <h:column>  
+                    <f:facet name="header" >
+                        <h:outputText value="Reciever name"/>
+                    </f:facet>
+                      <h:outputText styleClass="dataTableOutputText" 
+                                    id="activity1" value="#{items.receiverid}"/>  
+                </h:column>  
+                 <h:column>  
+                    <f:facet name="header">
+                        <h:outputText value="Sender name"/>
+                    </f:facet>
+                     <f:param rendered="#{items.senderid}"/>
+                      <h:outputText styleClass="dataTableOutputText" 
+                                    id="activity2" value="#{items.senderid}"/>  
+                </h:column> 
+                 <h:column>  
+                    <f:facet name="header">
+                        <h:outputText value="Message"/>
+                    </f:facet>
+                      <h:outputText styleClass="dataTableOutputText" 
+                                    id="activity3" value="#{items.msgcontent}"/>  
+                </h:column> 
+                 <h:column>  
+                   <f:facet name="header">
+                        <h:outputText value="Status"/>
+                    </f:facet>
+                      <h:outputText styleClass="dataTableOutputText" 
+                                    id="activity4" value="#{items.status}"/>  
+                </h:column> 
+                 <h:column>  
+                    <f:facet name="header">
+                        <h:outputText value="Time"/>
+                    </f:facet>
+                      <h:outputText styleClass="dataTableOutputText" 
+                                    id="activity5" value="#{items.senttime}"/>  
+                </h:column> 
+                 <h:column>  
+                    <f:facet name="header">
+                        <h:outputText value="MarkasRead"/>
+                    </f:facet>
+                     <h:commandButton id="read" value="Mark as Read"  action="Markread.xhtml"> 
+                         <f:setPropertyActionListener target="#{markasread.senderid}" value="#{items.senderid}"/>
+                         <f:setPropertyActionListener target="#{markasread.time}" value="#{items.senttime}"/>
+                     </h:commandButton>
+                </h:column> 
+                 <h:column>  
+                    <f:facet name="header">
+                        <h:outputText value="Reply"/>
+                    </f:facet>
+                      <h:commandButton id="submit1" value="Reply" action="Reply.xhtml">
+                         <f:setPropertyActionListener target="#{reply.receiverid}" value="#{items.senderid}"/>
+                      </h:commandButton> 
+                 </h:column> 
+                <h:column>  
+                    <f:facet name="header">
+                        <h:outputText value="Delete"/>
+                    </f:facet>
+                      <h:commandButton id="submit" value="Delete" action="Delete.xhtml">
+                          <f:setPropertyActionListener target="#{delete.senderid}" value="#{items.senderid}"/>
+                          <f:setPropertyActionListener target="#{delete.recieverid}" value="#{items.receiverid}"/>
+                          <f:setPropertyActionListener target="#{delete.time}" value="#{items.senttime}"/>
+                      </h:commandButton> 
+                 </h:column>   
+                
+            </h:dataTable>   
+     
+           <p>Outbox</p>
+            <h:dataTable id="outbox" 
+                         rows ="#{messages.getOutbox().size()}" 
+                         value="#{messages.getOutbox()}" var="items">  
+                <h:column>  
+                    <f:facet name="header" >
+                        <h:outputText value="Reciever name"/>
+                    </f:facet>
+                      <h:outputText styleClass="dataTableOutputText" 
+                                    id="out1" value="#{items.receiverid}"/>  
+                </h:column>  
+                 <h:column>  
+                    <f:facet name="header">
+                        <h:outputText value="Sender name"/>
+                    </f:facet>
+                      <h:outputText styleClass="dataTableOutputText" 
+                                    id="out2" value="#{items.senderid}"/>  
+                </h:column> 
+                 <h:column>  
+                    <f:facet name="header">
+                        <h:outputText value="Message"/>
+                    </f:facet>
+                      <h:outputText styleClass="dataTableOutputText" 
+                                    id="out3" value="#{items.msgcontent}"/>  
+                </h:column> 
+                 <h:column>  
+                   <f:facet name="header">
+                        <h:outputText value="Status"/>
+                    </f:facet>
+                      <h:outputText styleClass="dataTableOutputText" 
+                                    id="out4" value="#{items.status}"/>  
+                </h:column> 
+                 <h:column>  
+                    <f:facet name="header">
+                        <h:outputText value="Time"/>
+                    </f:facet>
+                      <h:outputText styleClass="dataTableOutputText" 
+                                    id="out5" value="#{items.senttime}"/>  
+                </h:column>  
+                <h:column>  
+                    <f:facet name="header">
+                        <h:outputText value="Delete"/>
+                    </f:facet>
+                      <h:commandButton id="submit" value="Delete" action="Delete.xhtml">
+                          <f:setPropertyActionListener target="#{delete.senderid}" value="#{items.senderid}"/>
+                          <f:setPropertyActionListener target="#{delete.recieverid}" value="#{items.receiverid}"/>
+                          <f:setPropertyActionListener target="#{delete.time}" value="#{items.senttime}"/>
+                      </h:commandButton> 
+                 </h:column>                 
+            </h:dataTable> 
+           <br></br>
+           <h:button value="Back to Main Page" outcome="MainPage"/>
+        </h:form>
+    </h:body>
+</html>

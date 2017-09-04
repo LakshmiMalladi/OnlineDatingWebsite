@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html id="signimage1" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>Like a profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="MainPageCss.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h:form>
+            
+            <p>
+                Search profiles to like
+            </p>
+            <p>
+                <h:commandButton id="search" value="Discover" action="Discover.xhtml"/>     
+            </p>
+        </h:form>
+        
+        <h:form>
+            <h:commandButton id="who_liked" value="who_liked_my_profile" action="#{like.rlikes()}"/>
+        </h:form>
+        <br></br>
+        <h:form>
+            <h:commandButton id="i_liked" value="profiles_liked" action="#{like.slikes()}"/>
+        </h:form>
+        <br></br>
+        <h:form>
+            <h:commandButton id="back" value="Back to Main Page" action="MainPage.xhtml"/>
+        </h:form>   
+    </body>
+</html>

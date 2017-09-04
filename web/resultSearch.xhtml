@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html id="signimage1" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="MainPageCss.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h:form>
+        <div>
+            <h:dataTable value="#{search.list}" var="item" >
+               <h:column>
+                   <f:facet name="header">
+                   <h:outputText value="Name"/>
+                   </f:facet>
+                   <h:outputText binding="#{nameVal}" value="#{item.name}"/>
+               </h:column>
+                   
+               <h:column>
+                   <h:commandButton value ="view" action="#{otherProfileData.otherProfileDataGet(nameVal.value)}"/>
+               </h:column>
+               <h:column>
+                   <h:commandButton value="Send Request" action="#{sendfriendrequest.sendrequest(item.name)}"/>
+               </h:column>
+                <h:column>
+                    <h:commandButton value="wink" action="#{winkp.cwink(nameVal.value)}"/>
+                    <br></br>
+                </h:column>
+                <h:column>
+                    <h:commandButton value="like" action="#{likep.likep(nameVal.value)}"/>
+                    <br></br>
+                </h:column>
+            </h:dataTable>
+<!--            <h:outputScript rendered="#{winkp.winked}">
+                            alert("you have winked" + "#{winkp.count}" + "times");
+            </h:outputScript>
+            <h:messages globalOnly="false" />-->
+            
+            <h:button value="Back to Main Page" outcome="MainPage"/>
+        </div>
+            </h:form>
+    </body>
+</html>

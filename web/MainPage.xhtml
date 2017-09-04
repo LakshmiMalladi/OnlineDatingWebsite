@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html id="signimage1" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+        <link href="MainPageCss.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h:form>
+            <nav class="navbar navbar-default navbar-static-top">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                  </div>
+                  <div id="navbar" class="navbar-collapse collapse">
+                      <table id="dis">
+                        <th>
+                            <img id="img1" src="match1.png" alt="" height="50" width="50"/>
+                        </th>
+                        <th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+                        <th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+                        <th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+                        <th>
+                            <h:commandButton style="background:#3333ff;color:white;border:none" class="dropbtn" value="Discover" action="Discover.xhtml"></h:commandButton>
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>
+                            <div class="dropdown">
+                              <button id="bt1" class="dropbtn">Message</button>
+                              <div class="dropdown-content">
+                                <a href="sendmessage.xhtml">Send Message</a>
+                                <a href="Viewmessages.xhtml">View Message</a>
+                              </div>
+                            </div>
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>
+                            <div class="dropdown">
+                                <button id="bt1" class="dropbtn">Interests</button>
+                                <div class="dropdown-content">
+                                  <a href="viewp.xhtml">View</a>  
+                                  <a href="winkp.xhtml">Wink</a>
+                                  <a href="likep.xhtml">Like</a>
+                                </div>
+                            </div>
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>
+                            <div class="dropdown">
+                                <button id="bt1" class="dropbtn">Friends</button>
+                                <div class="dropdown-content">
+                                    <a href="viewfriends.xhtml">View All</a>
+                                  <a href="Discover.xhtml">Send Request</a>
+                                </div>
+                            </div>
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>
+                            <div class="dropdown">
+                                <button id="bt1" class="dropbtn">Event</button>
+                                <div class="dropdown-content">
+                                    <a href="Eventlist.xhtml">List</a>
+                                </div>
+                            </div>
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>
+                            <div class="dropdown">
+                                <button id="bt1" class="dropbtn">Profile</button>
+                                <div class="dropdown-content">
+                                  <a href="changepassword.xhtml">Edit Password</a>
+                                  <a href="edituserprofile.xhtml">Edit Profile</a>
+                                </div>
+                            </div>
+                        </th>
+                        <th id="signout">
+                            <h:commandButton style="background:#3333ff;color:white;border:none" class="dropbtn" value="Signout" action="#{login.theCurrentAccount.signOut()}"></h:commandButton>
+                        </th>
+                        </table>
+                  </div>
+                </div>
+            </nav>    
+            <div>
+                <p> welcome #{login.id} to online dating</p>
+                <p>About you</p>
+                <p>Name: #{login.theCurrentAccount.name}</p>
+                <p>Age: #{login.theCurrentAccount.age}</p>
+                <p>gender: #{login.theCurrentAccount.gender}</p>
+                <p>interested gender: #{login.theCurrentAccount.interestgender}</p>
+                <p>city: #{login.theCurrentAccount.city}</p>
+                <p>eye color: #{login.theCurrentAccount.eyecolor}</p>
+                <p>body type: #{login.theCurrentAccount.bodytype}</p>
+                <p>height: #{login.theCurrentAccount.height}</p>
+                <p>relationship status: #{login.theCurrentAccount.relationshipstatus}</p>
+                <p>about match: #{login.theCurrentAccount.aboutmatch}</p>
+                <p>headline: #{login.theCurrentAccount.headline}</p>
+                
+            </div>
+        </h:form>
+    </body>
+</html>

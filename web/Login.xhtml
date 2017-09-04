@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="signimage1" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+    <h:head>
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="MainPageCss.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    
+    <h:body>
+        <h:form>
+            <p>
+                Enter your login id: <br></br>
+                <h:inputText id="id" required="true" autocomplete="off"
+                         requiredMessage="The login field cannot be empty"
+                         title="Please enter your login id" value="#{login.id}">
+                <f:validateLength maximum="100" minimum="5" />
+            </h:inputText>
+            </p>
+                
+            <p>Enter your password:<br></br>
+                <h:inputSecret
+                   id="password" required ="true" autocomplete="false" 
+                   requiredMessage="Password cannot be empty"
+                    title="Please enter your password"
+                    value="#{login.pswd}" >
+               </h:inputSecret>
+             </p>
+              <p>
+                <h:commandButton id="submit" value="Login"
+                                 action="#{login.cLogin()}" />
+            </p>
+        </h:form>
+    </h:body>
+</html>

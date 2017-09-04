@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html id="signimage1" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p ="http://primefaces.org/ui">
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="MainPageCss.css" rel="stylesheet" type="text/css"/>
+        <style>
+            #t1{
+                display:inline-block;
+                border:none;
+                height:100px;
+                width:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h:form>
+                <h:panelGrid id="t1" cellspacing="1" cellpadding="5" columns="2">
+                <p>I am a <br></br>
+                    <h:selectOneMenu id="gender1" value="#{search.gender}">
+                        <f:selectItem itemLabel="Female" itemValue="Female"></f:selectItem>
+                        <f:selectItem itemLabel="Male" itemValue="Male"></f:selectItem>
+                    </h:selectOneMenu>    
+                </p>
+                <p>Seeking a  <br></br>
+                    <h:selectOneMenu id="gender2" value="#{search.interestgender}">
+                        <f:selectItem itemLabel="Female" itemValue="Female"></f:selectItem>
+                        <f:selectItem itemLabel="Male" itemValue="Male"></f:selectItem>
+                    </h:selectOneMenu>    
+                </p>
+                <p>Between ages  <br></br>
+                    <h:inputText id="ageBegin" required="true" value="#{search.ageBegin}"></h:inputText>
+                    <p:spacer width="10"></p:spacer>  
+                    <h:inputText id="ageEnd" required="true" value="#{search.ageEnd}"></h:inputText>
+                </p>
+                <p>Near ZIP/Postal Code<br></br>
+                    <h:inputText id="zipcode" required ="true" 
+                                 requiredMessage="The zipcode field cannot be empty"
+                                 title="Please enter their zipcode" value="#{search.zipcode}">
+                        <f:validateLength maximum="5"/>
+                    </h:inputText>
+                </p>
+                    </h:panelGrid>
+                <h:panelGroup>
+                    
+                    <h:commandButton id = "submit2" value = "RefinedSearch" action="#{search.refinedSearch(a)}"></h:commandButton>
+                    <p:spacer width="45"></p:spacer>
+                    <h:commandButton id = "submit4" value = "Search" action="#{search.searchNew()}"/>
+                    <p:spacer width="45"></p:spacer>
+                    <h:button value="Back to Main Page" outcome="MainPage"/>
+                </h:panelGroup>
+                
+                <h:panelGrid rendered="#{search.toRefineSearch}">
+                    <h:form>
+                        <div>
+                            <p>Enter your eye color(select only one):<br></br>
+                                <h:selectOneMenu id="eyecolor" value="#{search.eyecolor}">
+                                    <f:selectItem itemValue="Black" itemLabel="black"/>
+                                    <f:selectItem itemValue="Brown" itemLabel="brown"/>
+                                    <f:selectItem itemValue="Blue" itemLabel="blue"/>
+                                    <f:selectItem itemValue="Honey" itemLabel="honey"/>
+                                    <f:selectItem itemValue="Hazel" itemLabel="hazel"/>
+                                </h:selectOneMenu>              
+                            </p>
+                            <p>Enter your hair color(select only one):<br></br>
+                                <h:selectOneMenu id="haircolor" value="#{search.haircolor}">
+                                   <f:selectItem itemValue="Black" itemLabel="black"/>
+                                   <f:selectItem itemValue="Light Brown" itemLabel="light brown"/>
+                                   <f:selectItem itemValue="Dark Brown" itemLabel="dark brown"/>
+                                   <f:selectItem itemValue="Blonde" itemLabel="blonde"/>
+                                   <f:selectItem itemValue="Auburn/Red" itemLabel="aburn/red"/>
+                               </h:selectOneMenu>
+                            </p>
+                            <p>Enter the interest you are looking out for <br></br>
+                                <h:inputText id="Interest03" 
+                                        title="Please enter your third interest"
+                                        value="#{search.interest}">                   
+                                </h:inputText>
+                            </p>
+                            <p>Enter your physique type(select any one): <br></br>
+                                <h:selectOneMenu id="body_type" value="#{search.bodytype}" required="false">
+                                    <f:selectItem itemValue="No Preference" itemLabel="no preference"/>
+                                    <f:selectItem itemValue="Slender" itemLabel="slender"/>
+                                    <f:selectItem itemValue="Above Average" itemLabel="above average"/>
+                                    <f:selectItem itemValue="Athletic and Toned" itemLabel="athletic and toned"/>
+                                    <f:selectItem itemValue="Heavy Set" itemLabel="heavy set"/>
+                                </h:selectOneMenu>
+                            </p>   
+                            <p>Enter their height:<br></br>
+                                <h:inputText id="height" 
+                                        title="Please enter your Hair color"
+                                        value="#{search.height}">                   
+                                </h:inputText>
+                            </p> 
+                            <p>Enter the relationship status of the person you are looking for : <br></br>
+                                <h:selectOneMenu id="Relationship_status" value="#{search.relationshipstatus}">
+                                    <f:selectItem itemValue="Never Married" itemLabel="never married"/>
+                                    <f:selectItem itemValue="Married" itemLabel="married"/>
+                                    <f:selectItem itemValue="Divorced" itemLabel="divorced"/>
+                                    <f:selectItem itemValue="Currently Seperated" itemLabel="currenty seperated"/>
+                                    <f:selectItem itemValue="Widow/Widower" itemLabel="widow/widower"/>
+                                </h:selectOneMenu>
+                            </p>
+                           <p>
+                               <h:commandButton id="submit" label="Search" value="Search" action="#{search.refinedSearch(b)}"></h:commandButton>
+                           </p>
+                        </div>
+                    </h:form>
+                </h:panelGrid>
+            </h:form>
+        </div>
+    </body>
+</html>
+    

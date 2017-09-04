@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        
+        <title>Match.com &reg; | The Leading Online Dating Site for Singles and  Personals : Match.com </title><link rel="icon" type="image/x-icon" href="match1.png"/>
+    </head>
+    <body>
+        <h:form>
+            
+            <h3><font face="Book Antiqua" color="red">No:1 in dates,relationships and marriages</font></h3>
+            
+            <h2><font face="Book Antiqua" color="hotpink">Register your Profile!!!</font></h2>
+            
+              <p>Enter your Login id:<br></br>
+                <h:inputText id="Loginid" required ="true" 
+                             requiredMessage="The Login field cannot be empty"
+                        title="Please enter your Login ID"
+                        value="#{signup.loginid}">
+                    <f:validateLength maximum="100" minimum="5" />
+                </h:inputText>
+             </p>
+            
+             <p>Choose password:<br></br>
+               <h:inputText
+                   id="password" required ="true" 
+                   requiredMessage="Password cannot be empty"
+                    title="Please enter your password"
+                    value="#{signup.password}">
+               </h:inputText>
+             </p>
+            
+            
+             <p>DOB:<br></br>
+               <h:inputText
+                   id="dob" required ="true" 
+                   requiredMessage="DOB cannot be empty"
+                    title="Please enter your date of birth in MM/DD/YYYY"
+                    value="#{signup.dob}">
+               </h:inputText>
+            </p>
+            <p>
+                <h:commandButton id="submit" value="Continue"
+                                 action="Createnewprofile.xhtml" />
+            </p>
+            
+        </h:form>
+    </body>
+    
+</html>

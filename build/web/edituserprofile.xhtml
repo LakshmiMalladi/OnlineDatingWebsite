@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html id="signimage1" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <head>
+        <title>edit user profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="MainPageCss.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h:form>
+            <div><h2>#{edituserprofile.getuserprofile()}</h2></div>
+             <p>I am: <br></br>
+                 <h:selectOneMenu id="gender" title="please enter your gender"
+                                  value="#{edituserprofile.gender}"> 
+                    <f:selectItem itemValue="#{edituserprofile.gender}"  />
+                    <f:selectItem itemValue="Female"  itemDisabled="#{edituserprofile.gender eq 'Female'}"></f:selectItem>
+                    <f:selectItem itemValue="Male"  itemDisabled="#{edituserprofile.gender eq 'Male'}"></f:selectItem>
+                 </h:selectOneMenu>
+            </p>
+            <br></br>
+            <p>Seeking a:<br></br>
+                <h:selectOneMenu id="sgender" value="#{edituserprofile.interestedgender}">
+                    <f:selectItem itemValue="#{edituserprofile.interestedgender}"  />
+                    <f:selectItem itemValue="Female"  itemDisabled="#{edituserprofile.interestedgender eq 'Female'}"></f:selectItem>
+                    <f:selectItem itemValue="Male"  itemDisabled="#{edituserprofile.interestedgender eq 'Male'}"></f:selectItem>
+                </h:selectOneMenu>               
+            </p>
+            <br></br>
+            <p>Enter age:<br></br>
+                <h:inputText id="age" 
+                        title="Please enter your age"
+                        value="#{edituserprofile.age}">                   
+                </h:inputText>
+            </p>
+            <br></br>
+             <p>Enter Name:<br></br>
+                <h:inputText id="name" 
+                        title="Please enter your Name"
+                        value="#{edituserprofile.name}">                   
+                </h:inputText>
+            </p>
+            <br></br>
+            <p>Enter your new Zip code:<br></br>
+                <h:inputText id="zipcode" 
+                        title="Please enter the zipcode(radius) to search:"
+                        value="#{edituserprofile.zipcode}">                   
+                </h:inputText>
+            </p>
+            <br></br>
+                <p>Enter your eye color(select only one):<br></br>
+                    <h:selectOneMenu id="eyecolor" value="#{edituserprofile.eyecolor}">
+                    <f:selectItem itemValue="Black" itemDisabled="#{edituserprofile.eyecolor eq 'Black'}"/>
+                    <f:selectItem itemValue="Brown" itemDisabled="#{edituserprofile.eyecolor eq 'Brown'}"/>
+                    <f:selectItem itemValue="Blue" itemDisabled="#{edituserprofile.eyecolor eq 'Blue'}"/>
+                    <f:selectItem itemValue="Honey" itemDisabled="#{edituserprofile.eyecolor eq 'Honey'}"/>
+                    <f:selectItem itemValue="Hazel" itemDisabled="#{edituserprofile.eyecolor eq 'Hazel'}"/>
+                </h:selectOneMenu>              
+            </p>
+            <br></br>
+            <p>Enter your hair color(select only one):<br></br>
+                <h:selectOneMenu id="haircolor" value="#{edituserprofile.haircolor}">
+                    <f:selectItem itemValue="Black" itemDisabled="#{edituserprofile.haircolor eq 'Black'}"/>
+                    <f:selectItem itemValue="Light Brown" itemDisabled="#{edituserprofile.haircolor eq 'Brown'}"/>
+                    <f:selectItem itemValue="Dark Brown" itemDisabled="#{edituserprofile.haircolor eq 'Dark Brown'}"/>
+                    <f:selectItem itemValue="Blonde" itemDisabled="#{edituserprofile.haircolor eq 'Blonde'}"/>
+                    <f:selectItem itemValue="Auburn/Red" itemDisabled="#{edituserprofile.haircolor eq 'Auburn/Red'}"/>
+                </h:selectOneMenu>
+             </p>          
+            <br></br>
+            <p>Enter any 3 interests</p>
+            <p>Enter your first interest<br></br>
+                <h:inputText id="Interest01" 
+                        title="Please enter your first interest"
+                        value="#{edituserprofile.interest01}">                   
+                </h:inputText>
+            </p>
+            <br></br>
+                 <p>Enter your second interest<br></br>
+                <h:inputText id="Interest02" 
+                        title="Please enter your second interest"
+                        value="#{edituserprofile.interest02}">                   
+                </h:inputText>
+            </p>
+            <br></br>
+            <p>Enter your third interest<br></br>
+                <h:inputText id="Interest03" 
+                        title="Please enter your third interest"
+                        value="#{edituserprofile.interest03}">                   
+                </h:inputText>
+            </p>
+            <br></br>
+            <p>Enter your physique type(select any one):<br></br>
+                <h:selectOneMenu id="body_type" value="#{edituserprofile.bodytype}">
+                    <f:selectItem itemValue="No Preference" itemDisabled="#{edituserprofile.bodytype eq 'No Preference'}"/>
+                    <f:selectItem itemValue="Slender" itemDisabled="#{edituserprofile.bodytype eq 'Slender'}"/>
+                    <f:selectItem itemValue="Above Average" itemDisabled="#{edituserprofile.bodytype eq 'Above Average'}"/>
+                    <f:selectItem itemValue="Athletic and Toned" itemDisabled="#{edituserprofile.bodytype eq 'Athletic and Toned'}"/>
+                    <f:selectItem itemValue="Heavy Set" itemDisabled="#{edituserprofile.bodytype eq 'Heavy Set'}"/>
+                </h:selectOneMenu>
+            </p>
+            <br></br> 
+            <p>Enter your height:<br></br>
+                
+                <h:inputText id="height" 
+                        title="Please enter your Height"
+                        value="#{edituserprofile.height}">                   
+                </h:inputText>
+            </p> 
+           <br></br>
+           <p>Enter your relationship status:<br></br>
+               <h:selectOneMenu id="Relationship_status" value="#{edituserprofile.relationshipstatus}">
+                   <f:selectItem itemValue="Never Married" itemDisabled="#{edituserprofile.relationshipstatus eq 'Never Married'}"/>
+                   <f:selectItem itemValue="Married" itemDisabled="#{edituserprofile.relationshipstatus eq 'Married'}"/>
+                    <f:selectItem itemValue="Divorced" itemDisabled="#{edituserprofile.relationshipstatus eq 'Divorced'}"/>
+                    <f:selectItem itemValue="Currently Seperated" itemDisabled="#{edituserprofile.relationshipstatus eq 'Currently Seperated'}"/>
+                    <f:selectItem itemValue="Widow/Widower" itemDisabled="#{edituserprofile.relationshipstatus eq 'Widow/Widower'}"/>
+                </h:selectOneMenu>
+            </p>
+           <br></br>
+           <p>Your headline:<br></br>
+                <h:inputText id="headline" 
+                        title="Your headline is a great way to grab someone's attention."
+                        value="#{edituserprofile.headline}">                   
+                </h:inputText>
+            </p> 
+           <br></br>
+           <p>Write about your match:<br></br>
+                <h:inputText id="aboutmatch" 
+                        title="Short description of what you are looking for."
+                        value="#{edituserprofile.aboutmatch}">                   
+                </h:inputText>
+            </p>
+           <br></br>
+           <p>please give a security question: <br></br>
+               <h:inputText id="security_question"
+                            title="this helps to access your account when you forget your password."
+                            value="#{edituserprofile.securityQuest}">
+               </h:inputText>
+           </p>
+           <br></br>
+           <p>please give a answer to your security question: <br></br>
+               <h:inputText id="security_answer"
+                            title="this helps to access your account when you forget your password."
+                            value="#{edituserprofile.securityans}">
+               </h:inputText>
+           </p>
+           <br></br>
+            <p>
+                <h:commandButton value="update" action="#{edituserprofile.edituserprofile()}"/>
+                <p:spacer width="10"></p:spacer>
+                <h:button value="Back to Main Page" outcome="MainPage"/>
+            </p>
+            
+        </h:form>
+    </body>
+</html>

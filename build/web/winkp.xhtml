@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html id="signimage1" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>wink a profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="MainPageCss.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h:form>
+            <p>
+                search profiles to wink
+            </p>
+            
+            <p>
+                <h:commandButton id="search" value="Discover" action="Discover.xhtml"/>
+            </p>
+        </h:form>
+        <br></br>
+        <h:form>
+            <h:commandButton id="who_winked" value="who_winked_my_profile" action="#{wink.rwink()}"/>
+        </h:form>
+        <br></br>
+        <h:form>
+            <h:commandButton id="i_winked" value="profiles_i_winked" action="#{wink.swink()}"/>
+        </h:form>
+        <h:form>
+            <p>
+                <h:commandButton id="return" value="Back to Main Page" action="MainPage.xhtml"/>
+            </p>
+        </h:form>
+    </body>
+</html>

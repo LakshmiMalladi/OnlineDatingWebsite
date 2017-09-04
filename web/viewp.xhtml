@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="signimage1" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <head>
+        <title>view profiles</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="MainPageCss.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h:form>    
+             <p>
+               search profiles to view
+             </p>
+            <p>
+                <h:commandButton id="search" value="Discover" action="Discover.xhtml"/>
+            </p>
+        </h:form>
+        
+        <h:form>
+            <h:commandButton id="sent_views" value="who_viewed_my_profile" action="#{pview.receivedview()}"/>
+        </h:form>
+        <br></br>
+        <h:form>
+            <h:commandButton id="i_viewed" value="profiles_i_viewed" action="#{pview.sentview()}"/>
+        </h:form>
+        <br></br>
+        <h:form>
+            <h:commandButton id="back" value="Back to Main Page" action="MainPage.xhtml"/>
+        </h:form>
+        </body>
+</html>
+    
